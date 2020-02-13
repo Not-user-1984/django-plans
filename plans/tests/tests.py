@@ -1,28 +1,27 @@
+from datetime import date, timedelta
 from decimal import Decimal
-from datetime import date
-from datetime import timedelta
 from io import StringIO
 
-from django.core.exceptions import ImproperlyConfigured, ValidationError
-from django.test import TestCase
-from django.contrib.auth import get_user_model
+import six
 from django.conf import settings
+from django.contrib.auth import get_user_model
 from django.core import mail
+from django.core.exceptions import ImproperlyConfigured, ValidationError
 from django.core.management import call_command
 from django.db.models import Q
-from django.utils import six
+from django.test import TestCase
 
+from plans.models import Invoice, Order, Plan, PlanPricing, PlanQuota, UserPlan
+from plans.plan_change import PlanChangePolicy, StandardPlanChangePolicy
+from plans.quota import get_user_quota
+from plans.taxation.eu import EUTaxationPolicy
+from plans.validators import ModelCountValidator
 
 if six.PY2:
     import mock
 elif six.PY3:
     from unittest import mock
 
-from plans.models import PlanPricing, Invoice, Order, Plan, PlanQuota, UserPlan
-from plans.plan_change import PlanChangePolicy, StandardPlanChangePolicy
-from plans.taxation.eu import EUTaxationPolicy
-from plans.quota import get_user_quota
-from plans.validators import ModelCountValidator
 
 
 User = get_user_model()

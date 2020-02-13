@@ -28,7 +28,8 @@ setup(
         'Programming Language :: Python :: 3.6',
     ],
     install_requires=[
-        'django-countries>=4.5',
+        'https://github.com/SmileyChris/django-countries.git',  # django-countries hack
+        # 'django-countries>=4.5',
         'pytz>=2017.2',
         'django-ordered-model>=1.4.1',
         'vatnumber>=1.2',
