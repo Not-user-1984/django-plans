@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 import re
 import logging
-import vatnumber
+import vatnumber3 as vatnumber
 
 from decimal import Decimal
 from datetime import date, timedelta
