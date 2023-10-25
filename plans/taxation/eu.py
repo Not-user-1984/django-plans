@@ -3,7 +3,7 @@ import logging
 from django.core.exceptions import ImproperlyConfigured
 from suds import WebFault
 from suds.transport import TransportError
-import vatnumber
+import vatnumber3 as vatnumber
 import stdnum
 from plans.taxation import TaxationPolicy
 
