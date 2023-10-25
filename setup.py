@@ -34,7 +34,7 @@ setup(
         'django-ordered-model>=1.4.1',
         ' vatnumber3>=1.1.2',
         'celery',
-        'suds-jurko',
+        'suds-community>=1.1.2',
         'six',
     ],
     extras_require={
