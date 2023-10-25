@@ -32,7 +32,7 @@ setup(
         # 'django-countries>=4.5',
         'pytz>=2017.2',
         'django-ordered-model>=1.4.1',
-        'vatnumber>=1.2',
+        ' vatnumber3>=1.1.2',
         'celery',
         'suds-jurko',
         'six',
